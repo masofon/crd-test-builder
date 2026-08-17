@@ -1,4 +1,341 @@
-/* Design tokens exported from the Figma file's variables.
-   Populate before running a build; components bind with var(--...). */
+/* GENERATED FILE — DO NOT EDIT.
+ *
+ * Regenerate with:
+ *   mise x -- node ./.claude/skills/import-variables/generate-tokens-css.js
+ *
+ * Source: the committed Figma variable and style exports. Change a value in
+ * Figma and re-pull; an edit made here is lost on the next run, and the
+ * regeneration diff is the review surface.
+ *
+ * Bind a value with `var(--token)`; wear a text style with its class.
+ * `src/main.tsx` imports this file once, so every component sees it.
+ *
+ * Three of Figma's fields cannot cross over as they stand:
+ *
+ * - Gradient direction. Figma states it as a `gradientTransform`, a 2×3
+ *   affine matrix mapping the shape's 0..1 space to the gradient's; CSS
+ *   states it as an angle and derives the ramp's ends from the painted box.
+ *   The angle comes from the matrix's first row, which alone gives the
+ *   gradient parameter at a point; the ends are CSS's, so a gradient whose
+ *   ends sit off its shape in Figma is an approximation here.
+ * - Text case. CSS `text-transform` covers Figma's four ordinary cases and
+ *   none of its small-caps ones, which would need a font carrying that
+ *   glyph set. A style in one fails the generator rather than being
+ *   approximated.
+ * - Leading trim. Figma's CAP_HEIGHT and TEXT_BOUNDS have no stable CSS
+ *   equivalent, so a text style's `leadingTrim` goes no further than Figma.
+ *   Every style in the current export is NONE, so nothing is being lost
+ *   today — but unlike the three fields below, a style that moved off it
+ *   would be dropped silently rather than stopping the generator.
+ *
+ * `paragraphIndent`, `paragraphSpacing` and `listSpacing` are all expressible
+ * in CSS but have no settled rule here, so a style that moves one off its
+ * neutral value fails the generator rather than quietly losing it.
+ */
+
 :root {
+  /* ======== Primitives ======== */
+
+  /* --- border-width ------------------------------------------------------ */
+  --border-width-0: 0px;
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+
+  /* --- color ------------------------------------------------------------- */
+  --color-base-black: #000000;
+  --color-base-white: #ffffff;
+
+  --color-danger-50: #fef2f2;
+  --color-danger-100: #fee2e2;
+  --color-danger-200: #fecaca;
+  --color-danger-300: #fca5a5;
+  --color-danger-400: #f87171;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626;
+  --color-danger-700: #b91c1c;
+  --color-danger-800: #991b1b;
+  --color-danger-900: #7f1d1d;
+
+  --color-info-50: #eff6ff;
+  --color-info-100: #dbeafe;
+  --color-info-200: #bfdbfe;
+  --color-info-300: #93c5fd;
+  --color-info-400: #60a5fa;
+  --color-info-500: #3b82f6;
+  --color-info-600: #2563eb;
+  --color-info-700: #1d4ed8;
+  --color-info-800: #1e40af;
+  --color-info-900: #1e3a8a;
+
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5e1;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1e293b;
+  --color-neutral-900: #0f172a;
+
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+
+  --color-success-50: #f0fdf4;
+  --color-success-100: #dcfce7;
+  --color-success-200: #bbf7d0;
+  --color-success-300: #86efac;
+  --color-success-400: #4ade80;
+  --color-success-500: #22c55e;
+  --color-success-600: #16a34a;
+  --color-success-700: #15803d;
+  --color-success-800: #166534;
+  --color-success-900: #14532d;
+
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+  --color-warning-200: #fde68a;
+  --color-warning-300: #fcd34d;
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+  --color-warning-800: #92400e;
+  --color-warning-900: #78350f;
+
+  /* --- font -------------------------------------------------------------- */
+  --font-family-sans: "Inter";
+
+  --font-line-height-2xl: 32px;
+  --font-line-height-3xl: 38px;
+  --font-line-height-lg: 28px;
+  --font-line-height-md: 24px;
+  --font-line-height-sm: 20px;
+  --font-line-height-xl: 28px;
+  --font-line-height-xs: 16px;
+
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+  --font-size-lg: 18px;
+  --font-size-md: 16px;
+  --font-size-sm: 14px;
+  --font-size-xl: 20px;
+  --font-size-xs: 12px;
+
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+
+  /* --- radius ------------------------------------------------------------ */
+  --radius-2xl: 16px;
+  --radius-full: 9999px;
+  --radius-lg: 8px;
+  --radius-md: 6px;
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-xl: 12px;
+  --radius-xs: 2px;
+
+  /* --- space ------------------------------------------------------------- */
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+
+  /* ======== Semantic ======== */
+
+  /* --- action ------------------------------------------------------------ */
+  --action-danger-bg: var(--color-danger-600);
+  --action-danger-bg-active: var(--color-danger-800);
+  --action-danger-bg-hover: var(--color-danger-700);
+  --action-danger-fg: var(--color-base-white);
+
+  --action-disabled-bg: var(--color-neutral-100);
+  --action-disabled-fg: var(--color-neutral-400);
+
+  --action-primary-bg: var(--color-primary-600);
+  --action-primary-bg-active: var(--color-primary-800);
+  --action-primary-bg-hover: var(--color-primary-700);
+  --action-primary-fg: var(--color-base-white);
+
+  --action-secondary-bg: var(--color-base-white);
+  --action-secondary-bg-active: var(--color-neutral-100);
+  --action-secondary-bg-hover: var(--color-neutral-50);
+  --action-secondary-border: var(--color-neutral-300);
+  --action-secondary-fg: var(--color-neutral-900);
+
+  /* --- border ------------------------------------------------------------ */
+  --border-default: var(--color-neutral-200);
+  --border-focus: var(--color-primary-500);
+  --border-strong: var(--color-neutral-300);
+  --border-subtle: var(--color-neutral-100);
+
+  /* --- field ------------------------------------------------------------- */
+  --field-bg: var(--color-base-white);
+  --field-border: var(--color-neutral-300);
+  --field-border-focus: var(--color-primary-500);
+  --field-border-hover: var(--color-neutral-400);
+  --field-disabled-bg: var(--color-neutral-100);
+  --field-disabled-text: var(--color-neutral-400);
+  --field-error-border: var(--color-danger-500);
+  --field-error-text: var(--color-danger-600);
+  --field-helper: var(--color-neutral-500);
+  --field-label: var(--color-neutral-700);
+  --field-placeholder: var(--color-neutral-400);
+  --field-text: var(--color-neutral-900);
+
+  /* --- radius ------------------------------------------------------------ */
+  --radius-card: var(--radius-xl);
+  --radius-control: var(--radius-md);
+  --radius-field: var(--radius-md);
+  --radius-pill: var(--radius-full);
+
+  /* --- space ------------------------------------------------------------- */
+  --space-gap-lg: var(--space-16);
+  --space-gap-md: var(--space-12);
+  --space-gap-sm: var(--space-8);
+  --space-gap-xs: var(--space-4);
+  --space-inset-lg: var(--space-16);
+  --space-inset-md: var(--space-12);
+  --space-inset-sm: var(--space-8);
+  --space-inset-xl: var(--space-24);
+  --space-inset-xs: var(--space-4);
+
+  /* --- status ------------------------------------------------------------ */
+  --status-danger-bg: var(--color-danger-100);
+  --status-danger-fg: var(--color-danger-700);
+  --status-danger-solid-bg: var(--color-danger-600);
+  --status-danger-solid-fg: var(--color-base-white);
+
+  --status-info-bg: var(--color-info-100);
+  --status-info-fg: var(--color-info-700);
+  --status-info-solid-bg: var(--color-info-600);
+  --status-info-solid-fg: var(--color-base-white);
+
+  --status-neutral-bg: var(--color-neutral-100);
+  --status-neutral-fg: var(--color-neutral-700);
+  --status-neutral-solid-bg: var(--color-neutral-600);
+  --status-neutral-solid-fg: var(--color-base-white);
+
+  --status-primary-bg: var(--color-primary-100);
+  --status-primary-fg: var(--color-primary-700);
+  --status-primary-solid-bg: var(--color-primary-600);
+  --status-primary-solid-fg: var(--color-base-white);
+
+  --status-success-bg: var(--color-success-100);
+  --status-success-fg: var(--color-success-700);
+  --status-success-solid-bg: var(--color-success-700);
+  --status-success-solid-fg: var(--color-base-white);
+
+  --status-warning-bg: var(--color-warning-100);
+  --status-warning-fg: var(--color-warning-800);
+  --status-warning-solid-bg: var(--color-warning-500);
+  --status-warning-solid-fg: var(--color-neutral-900);
+
+  /* --- surface ----------------------------------------------------------- */
+  --surface-card: var(--color-base-white);
+  --surface-overlay: #0f172a80;
+  --surface-page: var(--color-neutral-50);
+  --surface-sunken: var(--color-neutral-100);
+
+  /* --- text -------------------------------------------------------------- */
+  --text-disabled: var(--color-neutral-400);
+  --text-link: var(--color-primary-600);
+  --text-muted: var(--color-neutral-400);
+  --text-on-accent: var(--color-base-white);
+  --text-primary: var(--color-neutral-900);
+  --text-secondary: var(--color-neutral-600);
+
+  /* ======== Figma styles ======== */
+
+  /* --- gradients --------------------------------------------------------- */
+
+  /* --- shadows ----------------------------------------------------------- */
+}
+
+/* ======== Figma text styles ======== */
+
+.body-md {
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-md);
+  line-height: var(--font-line-height-md);
+  letter-spacing: 0;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.body-sm {
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-height-sm);
+  letter-spacing: 0;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.heading-md {
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xl);
+  line-height: var(--font-line-height-lg);
+  letter-spacing: 0;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.heading-sm {
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-lg);
+  line-height: var(--font-line-height-lg);
+  letter-spacing: 0;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.label-lg {
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-md);
+  line-height: var(--font-line-height-md);
+  letter-spacing: 0;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.label-md {
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-height-sm);
+  letter-spacing: 0;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.label-sm {
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-xs);
+  line-height: var(--font-line-height-xs);
+  letter-spacing: 0;
+  text-transform: none;
+  text-decoration: none;
 }
