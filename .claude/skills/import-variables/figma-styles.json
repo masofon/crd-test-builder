@@ -1,0 +1,199 @@
+{
+  "fingerprint": "7:su0yia",
+  "styleCount": 7,
+  "styles": {
+    "paint": [],
+    "text": [
+      {
+        "name": "body/md",
+        "description": "CSS: var(--text-body-md)",
+        "fontFamily": {
+          "variable": "font/family/sans"
+        },
+        "fontStyle": {
+          "variable": "font/weight/regular"
+        },
+        "fontSize": {
+          "variable": "font/size/md"
+        },
+        "lineHeight": {
+          "unit": "PIXELS",
+          "variable": "font/line-height/md"
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE",
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "listSpacing": 0,
+        "leadingTrim": "NONE"
+      },
+      {
+        "name": "body/sm",
+        "description": "CSS: var(--text-body-sm)",
+        "fontFamily": {
+          "variable": "font/family/sans"
+        },
+        "fontStyle": {
+          "variable": "font/weight/regular"
+        },
+        "fontSize": {
+          "variable": "font/size/sm"
+        },
+        "lineHeight": {
+          "unit": "PIXELS",
+          "variable": "font/line-height/sm"
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE",
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "listSpacing": 0,
+        "leadingTrim": "NONE"
+      },
+      {
+        "name": "heading/md",
+        "description": "CSS: var(--text-heading-md)",
+        "fontFamily": {
+          "variable": "font/family/sans"
+        },
+        "fontStyle": {
+          "variable": "font/weight/semibold"
+        },
+        "fontSize": {
+          "variable": "font/size/xl"
+        },
+        "lineHeight": {
+          "unit": "PIXELS",
+          "variable": "font/line-height/lg"
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE",
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "listSpacing": 0,
+        "leadingTrim": "NONE"
+      },
+      {
+        "name": "heading/sm",
+        "description": "CSS: var(--text-heading-sm)",
+        "fontFamily": {
+          "variable": "font/family/sans"
+        },
+        "fontStyle": {
+          "variable": "font/weight/semibold"
+        },
+        "fontSize": {
+          "variable": "font/size/lg"
+        },
+        "lineHeight": {
+          "unit": "PIXELS",
+          "variable": "font/line-height/lg"
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE",
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "listSpacing": 0,
+        "leadingTrim": "NONE"
+      },
+      {
+        "name": "label/lg",
+        "description": "CSS: var(--text-label-lg)",
+        "fontFamily": {
+          "variable": "font/family/sans"
+        },
+        "fontStyle": {
+          "variable": "font/weight/medium"
+        },
+        "fontSize": {
+          "variable": "font/size/md"
+        },
+        "lineHeight": {
+          "unit": "PIXELS",
+          "variable": "font/line-height/md"
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE",
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "listSpacing": 0,
+        "leadingTrim": "NONE"
+      },
+      {
+        "name": "label/md",
+        "description": "CSS: var(--text-label-md)",
+        "fontFamily": {
+          "variable": "font/family/sans"
+        },
+        "fontStyle": {
+          "variable": "font/weight/medium"
+        },
+        "fontSize": {
+          "variable": "font/size/sm"
+        },
+        "lineHeight": {
+          "unit": "PIXELS",
+          "variable": "font/line-height/sm"
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE",
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "listSpacing": 0,
+        "leadingTrim": "NONE"
+      },
+      {
+        "name": "label/sm",
+        "description": "CSS: var(--text-label-sm)",
+        "fontFamily": {
+          "variable": "font/family/sans"
+        },
+        "fontStyle": {
+          "variable": "font/weight/medium"
+        },
+        "fontSize": {
+          "variable": "font/size/xs"
+        },
+        "lineHeight": {
+          "unit": "PIXELS",
+          "variable": "font/line-height/xs"
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE",
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "listSpacing": 0,
+        "leadingTrim": "NONE"
+      }
+    ],
+    "effect": []
+  }
+}
