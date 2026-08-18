@@ -3,9 +3,9 @@
 // Run it as:
 //
 //   mise x -- node ./.claude/skills/import-variables/merge-figma-pull.js \
-//     variables .local/temp/chunk-*.json
+//     variables .import-variables-temp/chunk-*.json
 //   mise x -- node ./.claude/skills/import-variables/merge-figma-pull.js \
-//     styles .local/temp/styles.json
+//     styles .import-variables-temp/styles.json
 //
 // Two pulls, one script, because they differ only in shape: both come back from
 // a `use_figma` call the agent has to retype, and both are checked the same way.

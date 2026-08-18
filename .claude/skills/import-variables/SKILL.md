@@ -68,8 +68,8 @@ Figma file key: `Qayy6zy5OxSRT4cbvFqjXR`
    still covers every value.
 
    **Write each chunk to its own file as it arrives**, verbatim, at
-   `.local/temp/chunk-<n>.json`. Transcribe rather than summarise: these values
-   are the design system.
+   `.import-variables-temp/chunk-<n>.json`. Transcribe rather than summarise:
+   these values are the design system.
 
    Report `N` and say the Figma connection succeeded — any count coming back is
    a success.
@@ -78,7 +78,7 @@ Figma file key: `Qayy6zy5OxSRT4cbvFqjXR`
 
    ```sh
    mise x -- node ./.claude/skills/import-variables/merge-figma-pull.js \
-     variables .local/temp/chunk-*.json
+     variables .import-variables-temp/chunk-*.json
    ```
 
    It decodes the rows back into variable objects, refuses anything that is not
@@ -106,11 +106,11 @@ Figma file key: `Qayy6zy5OxSRT4cbvFqjXR`
    This pull is **not chunked and not compressed** — all three style dumps
    together sit inside the result cap — so it returns everything in one call and
    there is no loop and no cursor. Write what comes back to
-   `.local/temp/styles.json`, verbatim, then merge it:
+   `.import-variables-temp/styles.json`, verbatim, then merge it:
 
    ```sh
    mise x -- node ./.claude/skills/import-variables/merge-figma-pull.js \
-     styles .local/temp/styles.json
+     styles .import-variables-temp/styles.json
    ```
 
    Same script as step 5, under its other mode: one pull, one export. It writes
@@ -154,7 +154,17 @@ Figma file key: `Qayy6zy5OxSRT4cbvFqjXR`
    The generated file is never hand-edited; the regeneration diff is the review
    surface.
 
-8. **Commit the CSS.** `run-test.sh` clones this repo fresh from GitHub for
+8. **Delete the scratch files.** Both merges have written their exports and the
+   CSS is regenerated, so the transcribed chunks have served their purpose:
+
+   ```sh
+   rm -rf .import-variables-temp
+   ```
+
+   Do this only after step 7 has succeeded — on any failure above, leave
+   `.import-variables-temp` in place so the pull can be inspected.
+
+9. **Commit the CSS.** `run-test.sh` clones this repo fresh from GitHub for
    every arm of a trial, so a `tokens.css` that is only on disk reaches no
    candidate. Report the diff and tell the human it needs committing and
    pushing; do not push it yourself.
