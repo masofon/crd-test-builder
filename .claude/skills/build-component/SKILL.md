@@ -14,3 +14,9 @@ the page's only component.
 If `$requirements-path` was given, read that file and treat it as the
 component's requirements alongside the Figma reads. If it was not given,
 work from the Figma reads alone.
+
+If anything unexpected happens (e.g. you don't have access to something,
+an error is thrown during your processes) stop and explain the error.
+
+Do not give any output other than errors or unexpected outcomes. If
+everything went well, say nothing. Do not give a summary.
