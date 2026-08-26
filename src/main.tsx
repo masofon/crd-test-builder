@@ -3,12 +3,14 @@ import { createRoot } from 'react-dom/client'
 import './tokens.css'
 
 import BadgePreview from './components/badge.preview'
+import TextHeaderPreview from './components/text-header.preview'
 
 // The gallery. Every component in this project has a preview beside it and
 // they are all listed here. This file is not part of anyone's build task —
 // leaving it alone is what stops one build disturbing another's work.
 const previews = [
   ['badge', BadgePreview],
+  ['text-header', TextHeaderPreview],
 ] as const
 
 createRoot(document.getElementById('root')!).render(
